@@ -1,0 +1,8 @@
+package entidades;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Comprador {
+	private List<Compra>  listCompras = new ArrayList<>(); 
+}

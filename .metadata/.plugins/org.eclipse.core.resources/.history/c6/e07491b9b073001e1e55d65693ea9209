@@ -1,0 +1,10 @@
+package entidades;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Fatura {
+	private double valorFatura;
+	private double totalCompras;
+	private List<Comprador> listComprador = new ArrayList<>(); 
+}

@@ -1,0 +1,5 @@
+package entidades;
+
+public interface CompradorInterface {
+	public void somaCompras(Integer i);
+}

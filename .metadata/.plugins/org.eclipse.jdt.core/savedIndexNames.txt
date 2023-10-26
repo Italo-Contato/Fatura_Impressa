@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Gabriel Italo\Desktop\dream Dev\Projetos Maiores\2\.metadata\.plugins\org.eclipse.jdt.core
+1514293966.index
+1076558108.index
+1865797976.index

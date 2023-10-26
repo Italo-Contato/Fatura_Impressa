@@ -1,0 +1,12 @@
+package entidades;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Comprador {
+	private List<Compra>  listCompras = new ArrayList<>(); 
+	private String nome;
+	private double valor_total_compras;
+	private int quantidade_compras;
+	
+}

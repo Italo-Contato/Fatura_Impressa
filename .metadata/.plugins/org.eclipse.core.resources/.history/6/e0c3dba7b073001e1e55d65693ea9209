@@ -1,0 +1,6 @@
+package entidades;
+
+public class Fatura {
+	private double valorFatura;
+	private double totalCompras;
+}

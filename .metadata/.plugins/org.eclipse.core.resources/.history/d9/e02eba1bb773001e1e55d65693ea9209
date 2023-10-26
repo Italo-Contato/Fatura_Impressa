@@ -1,0 +1,45 @@
+package program;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidades.Compra;
+import entidades.Comprador;
+import entidades.Fatura;
+
+public class App {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite o valor da fatura: ");
+		double valorDaFatura = sc.nextDouble();
+		System.out.print("Digite quantas pessoas devem nessa fatura: ");
+		int quantidadePessoas = sc.nextInt();
+		sc.nextLine();
+		Fatura fatura = new Fatura(valorDaFatura);
+		for (int i = 1; i <= quantidadePessoas; i++) {
+			// Criar comprador
+			System.out.println("Digite o nome do " + i + "º comprador(a):");
+			String nome = sc.nextLine();
+			System.out.print("Digite quantas compras vc acha que " + nome + " fez: ");
+			int quantidadeDeCompras = sc.nextInt();
+			sc.nextLine();
+			fatura.getListComprador().add(new Comprador(nome, quantidadeDeCompras));
+		}
+		for (int i = 1; i <= quantidadePessoas; i++) {
+			// Atribuir valores aos compradores
+			System.out.println("Compras de " + fatura.getListComprador().get(i).getNome() + ": ");
+			for (int j = 1; j < fatura.getListComprador().get(i).getListCompras().size(); j++) {
+
+				System.out.println("Digite o nome da compra: ");
+				String nomeCompra = sc.nextLine();
+				System.out.println("Digite o valor da compra: ");
+				double valorCompra = sc.nextDouble();
+				fatura.getListComprador().get(i).getListCompras().add(new Compra(nomeCompra, valorCompra));
+			}
+		}
+	}
+
+}

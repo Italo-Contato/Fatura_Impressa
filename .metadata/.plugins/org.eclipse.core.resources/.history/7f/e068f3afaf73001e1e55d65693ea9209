@@ -1,0 +1,32 @@
+package entidades;
+
+public class Compra {
+	private String nome_compra;
+	private double valor_compra;
+
+	public Compra() {
+
+	}
+
+	public Compra(String nome_compra, double valor_compra) {
+		this.nome_compra = nome_compra;
+		this.valor_compra = valor_compra;
+	}
+
+	public String getNomeCompra() {
+		return nome_compra;
+	}
+
+	public void setNomeCompra(String nome_compra) {
+		this.nome_compra = nome_compra;
+	}
+
+	public double getValorCompra() {
+		return valor_compra;
+	}
+
+	public void setValorCompra(double valor_compra) {
+		this.valor_compra = valor_compra;
+	}
+
+}

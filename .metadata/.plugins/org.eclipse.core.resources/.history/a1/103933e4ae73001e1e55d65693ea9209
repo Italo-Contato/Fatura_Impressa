@@ -1,0 +1,6 @@
+package entidades;
+
+public class Compra {
+	private String nome_compra;
+	private double valor_compra;
+}
