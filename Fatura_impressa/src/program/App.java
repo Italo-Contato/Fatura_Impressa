@@ -1,15 +1,17 @@
 package program;
 
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
 import entidades.Compra;
 import entidades.Comprador;
 import entidades.Fatura;
+import entidades.Gravador;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
@@ -43,6 +45,9 @@ public class App {
 				fatura.getListComprador().get(i).getListCompras().add(new Compra(nomeCompra, valorCompra));
 			}
 		}
+		Gravador gravador = new Gravador();
+		gravador.gravaFatura(fatura);
+		gravador.gravaCompradores(fatura);
 	}
 
 }

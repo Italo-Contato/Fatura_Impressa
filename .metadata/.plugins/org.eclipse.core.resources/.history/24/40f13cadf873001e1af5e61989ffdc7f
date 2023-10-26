@@ -1,0 +1,17 @@
+package entidades;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Gravador {
+	// classe que será responsavel por gerar um arquivo de texto(.txt ou .csv)
+	String caminho = "C:\\temp\\fatura.txt";
+
+	public void gravaFatura(Fatura fatura) throws IOException{
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(caminho))){
+			StringBuilder bf = new StringBuilder();
+			bw.write(fatura.getValorFatura());
+		}
+	}
+}

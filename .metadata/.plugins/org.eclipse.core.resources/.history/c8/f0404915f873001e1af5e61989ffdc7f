@@ -1,0 +1,14 @@
+package entidades;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class Gravador {
+	//classe que será responsavel por gerar um arquivo de texto(.txt ou .csv)
+	String caminho = "C:\\temp\\fatura.txt";
+	public void gravaFatura(Fatura fatura){
+		try(BufferedWriter bf = new BufferedWriter(new FileWriter(caminho))){
+			
+		}
+	}
+}
